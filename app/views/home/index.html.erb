@@ -1,0 +1,6 @@
+<h1>Welcome to Run with Me</h1>
+<%=link_to "Join", new_user_registration_path%>
+<%=link_to "Sing-in", new_user_session_path %>
+<% if user_signed_in? %>
+  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+<% end %>
