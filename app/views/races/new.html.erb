@@ -1,0 +1,9 @@
+<%= simple_form_for @race do |f|%>
+  <%= f.input :race_name, label: 'Race Name'%>
+  <%= f.input :distance, collection: @race_distances, label: 'Distance' %>
+  <%= Race Time %>
+  <%= f.input :time_minute, label: 'Minutes'%>
+  <%= f.input :time_second, label: 'Seconds' %>
+  <%= f.input :location, label: 'Location' %>
+  <%= f.button :submit %>
+<% end %>

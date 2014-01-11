@@ -34,6 +34,8 @@ end
 
 gem 'devise'
 
+gem 'simple_form'
+
 
 group :test, :development do
   gem "factory_girl_rails"
