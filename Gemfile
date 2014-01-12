@@ -38,6 +38,8 @@ gem 'simple_form'
 
 gem 'foundation-rails'
 
+gem 'rails_12factor'
+
 
 group :test, :development do
   gem "factory_girl_rails"
