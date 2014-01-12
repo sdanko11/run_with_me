@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
   validates :distance_per_week, :numericality => { :greater_than => 0 }
   validates :average_pace_second, :numericality => { :greater_than => -1, :less_than_or_equal_to => 59 }
   validates :average_pace_minute, numericality: :true
+  has_many :messages, :as => :reciever
+  has_many :messages, :as => :sender
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 end

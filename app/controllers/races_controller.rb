@@ -11,7 +11,7 @@ class RacesController < ApplicationController
   def create
     @race = current_user.races.build(race_params)
     if @race.save
-      redirect_to :back
+      redirect_to user_path(current_user)
     else
       render :new
     end

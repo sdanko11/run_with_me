@@ -1,9 +1,14 @@
-<%= simple_form_for @race do |f|%>
-  <%= f.input :race_name, label: 'Race Name'%>
-  <%= f.input :distance, collection: @race_distances, label: 'Distance' %>
-<h5>Race Time</h5>
-  <%= f.input_field :time_minute, label: 'Minutes'%>
-  <%= f.input_field :time_second, label: 'Seconds' %>
-  <%= f.input :location, label: 'Location' %>
-  <%= f.button :submit %>
-<% end %>
+<br>
+<div class="row">
+  <div class="small-2 large-4 columns">
+    <%= simple_form_for @race do |f|%>
+      <%= f.input :race_name, label: 'Race Name'%>
+      <%= f.input :distance, collection: @race_distances, label: 'Distance' %>
+    <h5>Race Time</h5>
+      <%= f.input :time_minute, label:'Minutes'%>
+      <%= f.input :time_second, label:'Seconds' %>
+      <%= f.input :location, label: 'Location' %>
+      <%= f.button :submit ,class: "button"%>
+  <% end %>
+</div>
+</div>

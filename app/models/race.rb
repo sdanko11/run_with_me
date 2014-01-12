@@ -6,6 +6,9 @@ class Race < ActiveRecord::Base
   validates :time_second, :numericality => { :greater_than => -1, :less_than_or_equal_to => 59 }
   validates :time_minute, :numericality => { :greater_than => -1 }
 
-  # validates_pressence_of :last_name
-  # validates_pressence_of :
+
+  def format_time
+    "#{time_minute}:#{time_second}"
+  end
+
 end

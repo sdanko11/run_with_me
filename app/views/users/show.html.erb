@@ -1,2 +1,43 @@
-<div><%= @user.first_name %><%= @user.last_name %></div>
-<%= link_to "Add New Race", new_race_path %>
+<div class="row">
+   <div class="medium-6 columns">
+    <h1><%= @user.first_name %><%= @user.last_name %></h1>
+  </div>
+</div>
+<div class="row">
+   <div class="medium-6 columns">
+    <%= link_to "Add New Race", new_race_path %>
+    <br>
+    <%= link_to "Find People to Run With", users_path %>
+  </div>
+</div>
+
+<div class="row">
+   <div class="medium-3 columns">
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class-"small-6 large-centered columns">
+    <table border="1">
+      <tr>
+    <th>Race</th>
+    <th>Distance</th>
+    <th>Time</th>
+    <th>Location</th>
+      <tr>
+        <% @user.races.each do |race| %>
+        <td><%= race.race_name %></td>
+        <td><%= race.distance %></td>
+        <td><%= race.format_time %></td>
+          <% if race.location != nil %>
+            <td><%= race.location %></td>
+          <% else %>
+            <td>No Location<td>
+          <% end %>
+      </tr>
+        <% end %>
+    </table>
+  </div>
+</div>
+
+
