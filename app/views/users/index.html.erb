@@ -1,0 +1,12 @@
+<div class="row">
+   <div class="medium-6 columns">
+    <h1><%= @user.first_name %><%= @user.last_name %></h1>
+  </div>
+</div>
+<div class="row">
+   <div class="medium-6 columns">
+    <%= link_to "Add New Race", new_race_path %>
+    <br>
+    <%= link_to "Find People to Run With", users_path %>
+  </div>
+</div>
